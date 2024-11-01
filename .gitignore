@@ -1,0 +1,32 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/ask-me-anything/node_modules
+/ask-me-anything/.pnp
+/ask-me-anything.pnp.*
+/ask-me-anything.yarn/*
+!/ask-me-anything.yarn/patches
+!/ask-me-anything.yarn/plugins
+!/ask-me-anything.yarn/releases
+!/ask-me-anything.yarn/versions
+
+# testing
+/ask-me-anything/coverage
+
+# next.js
+/ask-me-anything/.next/
+/ask-me-anything/out/
+
+# production
+/ask-me-anything/build
+
+# misc
+/ask-me-anything/.DS_Store
+*/ask-me-anything/.pem
+
+# env files (can opt-in for commiting if needed)
+/ask-me-anything/.env
+/server/.env
+/server/node_modules
+# vercel
+/ask-me-anything/.vercel
