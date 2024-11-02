@@ -16,7 +16,7 @@ export default async function SendMessageUsername({ params }) {
     });
 
     const checked = await checkUser.json();
-
+    const updatedUsername=username.replace("%40", "@");
 
     if (!checked) {
         redirect('/');
@@ -25,7 +25,7 @@ export default async function SendMessageUsername({ params }) {
     return (
         <>
             <Suspense fallback={<Loading />}>
-                <SendMessageForm username={username}></SendMessageForm>
+                <SendMessageForm username={updatedUsername}></SendMessageForm>
             </Suspense>
         </>
     );

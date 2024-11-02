@@ -1,4 +1,6 @@
 import Link from "next/link";
+// import isLoggedIn from "./components/loginCheck";
+
 
 export default function Home() {
   return (
@@ -12,8 +14,9 @@ export default function Home() {
           <svg className="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         </div>
         <div className="space-x-4">
-          <Link href="/signup" className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Sign Up</Link>
-          <Link href="/login" className=" bg-transparent text-indigo-600 px-6 py-3 rounded-lg font-semibold border border-indigo-600 hover:bg-transparent-50 transition duration-300">Log In</Link>
+          {
+             <Link href="/profile" className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Log In</Link>
+          }
         </div>
       </div>
     </div>
