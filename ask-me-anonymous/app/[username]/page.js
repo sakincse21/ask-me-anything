@@ -9,7 +9,7 @@ export default async function SendMessageUsername({ params }) {
     console.log(username);
 
 
-    const checkUser = await fetch(`http://localhost:3001/user/${username}`, {
+    const checkUser = await fetch(`https://ask-me-anonymous-server.onrender.com/user/${username}`, {
         next: {
             revalidate: 10
         }

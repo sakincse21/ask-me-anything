@@ -3,7 +3,7 @@
 // import React, { useState } from 'react'
 
 // const doLogin = async (token) => {
-//     const response = await axios.get(`http://localhost:3001/logincheck`, {
+//     const response = await axios.get(`https://ask-me-anonymous-server.onrender.com/logincheck`, {
 //         headers: {
 //             Authorization: `Bearer ${token}`,
 //         },

@@ -31,7 +31,7 @@ export default function Profile() {
   // Second useEffect to check login status only when the token is available
   useEffect(() => {
     if (token) {
-      fetch(`http://localhost:3001/login`, {
+      fetch(`https://ask-me-anonymous-server.onrender.com/login`, {
         method: "POST",
         headers: { authorization: `${token}` }
       })

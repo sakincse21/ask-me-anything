@@ -37,7 +37,7 @@ export default function Login() {
                 setDisplayName(user.displayName);
                 setIsLoggedIn(true);
 
-                fetch('http://localhost:3001/login', {
+                fetch('https://ask-me-anonymous-server.onrender.com/login', {
                     method: "POST",
                     headers: {
                         "name": `${user.displayName}`,

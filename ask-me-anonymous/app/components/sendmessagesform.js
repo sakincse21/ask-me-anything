@@ -10,7 +10,7 @@ export default function SendMessageForm(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const messagesending = await fetch(`http://localhost:3001/push/${username.replace("@", "%40")}`, {
+        const messagesending = await fetch(`https://ask-me-anonymous-server.onrender.com/push/${username.replace("@", "%40")}`, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
                 'Content-Type': 'application/json'
