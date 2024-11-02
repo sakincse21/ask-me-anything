@@ -5,8 +5,8 @@ import Login from '../components/login';
 import { redirect } from 'next/navigation';
 import Loading from './loading';
 
-import { motion } from "framer-motion"
 import ShareButton from '../components/shareButton';
+import ShowMessages from '../components/messages';
 
 export const LoginContext = createContext();
 
@@ -16,7 +16,7 @@ export default function Profile() {
   const [displayName, setDisplayName] = useState('');
   const [token, setToken] = useState('');
   const [messages, setMessages] = useState([]);
-  const [link, setLink]=useState('http://localhost:3000/');
+  const [link, setLink]=useState('http://ask-me-anonymous.vercel.app/');
 
   // First useEffect to retrieve the token from localStorage
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function Profile() {
           setIsLoggedIn(data.ifuser);
           setMessages(data.messages);
           setEmail(data.username);
-          setLink(`http://localhost:3000/${data.username}`) // Assuming `isAuthenticated` is a boolean from the server
+          setLink(`http://ask-me-anonymous.vercel.app/${data.username}`) // Assuming `isAuthenticated` is a boolean from the server
           // redirect('/profile');
         })
         .catch(error => {
@@ -81,16 +81,7 @@ export default function Profile() {
 
                 {messages && <div className="space-y-4">
                   {messages.map((message, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                    >
-                      <div className=" bg-slate-600 border rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                        <p className=" text-white text-lg">{message}</p>
-                      </div>
-                    </motion.div>
+                      <ShowMessages message={message} key={index}></ShowMessages>
                   ))}
                 </div>}
               </div>
