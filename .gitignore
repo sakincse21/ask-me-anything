@@ -30,3 +30,4 @@
 /server/node_modules
 # vercel
 /ask-me-anything/.vercel
+.vercel
